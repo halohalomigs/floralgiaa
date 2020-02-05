@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Directory</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="shortcut icon" href="img/head.png" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body id="body" onload="startup()">
+	<main>
+		<div class="content">
+			<div id="splash-page">
+				<div class="intro-area">
+					<span class="title">Floralgia</span>
+					<span class="subtitle">An educational platform about plants!</span>
+					<div class="button-play" onclick="setTimeout(activate, 1500); ShowCell(); HideTissue();">
+						<span class="button-text">PLAY</span>
+					</div>
+				</div>
+				<div class="footer">
+					<span class="subheading"> A Joint Biology 1 and CS 3 Project by </span> <br />
+					<span>
+						Sr 15 SALAZAR, Carlos <br />
+						Sr 24 CHUA, Hanielle <br />
+						St 30 VINAS, Melyza
+					</span>
+				</div>
+			</div>
+
+			<!-- Below are the main features of the website -->
+
+			<div class="main-divider">
+				<div class="divider" id="background">
+					<div class="container" id="functionC">
+						<div class="sideblock">
+							<div id="function-info">
+								<div id="main-box">
+									<span id="function-title"> PLANT CELL </span>
+									<span id="function-desc"> Cells are the basic unit of life in all organisms. Plants are made up of eukaryotic cells that are able to perform photosynthesis. The presence of cell wall outside the cell membrane is one of its distinctive aspects. It is rectangular in shape and comparatively larger than the animal cell. </span>
+									<span id="learn-more">Learn more about plants at <a href="https://byjus.com/biology/plant-cell/">this site!</a></span>
+								</div>
+							</div>
+							<div class="empty"></div>
+						</div>
+						<div id="functions">
+							<div class="container" id="inputC">
+								<div class="sideblock" id="disappear"></div>
+								<div class="input-area" id="bigBox">
+									<img id="cell-img" src="img/plant-cell.png" />
+									<img id="plant-img" src="img/plant-tissue.png" />
+									<div class="absdiv" onclick="infoNucleus()" id="nucleus"></div>
+									<div class="absdiv" onclick="infoCellWall()" id="cellWall"></div>
+									<div class="absdiv" onclick="infoRibosome()" id="ribosome"></div>
+									<div class="absdiv" onclick="infoChloroplast()" id="chloroplast"></div>
+									<div class="absdiv" onclick="infoLysosome()" id="lysosome"></div>
+									<div class="absdiv" onclick="infoVacuole()" id="vacuole"></div>
+									<div class="absdiv" onclick="infoCytoplasm()" id="cytoplasm"></div>
+									<div class="absdiv" onclick="infoMitochondrion()" id="mitochondrion"></div>
+									<div class="absdiv" onclick="infoEreticulum()" id="ereticulum"></div>
+									<div class="absdiv" onclick="infoGcomplex()" id="gcomplex"></div>
+									<div class="absdiv2" onclick="infoDermal()" id="dermal"></div>
+									<div class="absdiv2" onclick="infoMeristem()" id="meristem"></div>
+									<div class="absdiv2" onclick="infoVxylem()" id="xylem"></div>
+									<div class="absdiv2" onclick="infoVphloem()" id="phloem"></div>
+									<div class="absdiv2" onclick="infoGparenchyma()" id="parenchyma"></div>
+									<div class="absdiv2" onclick="infoGcollenchyma()" id="collenchyma"></div>
+									<div class="absdiv2" onclick="infoGsclerenchyma()" id="sclerenchyma"></div>
+								</div>
+								<div class="sideblock" id="disappear"></div>
+							</div>
+							<div class="container" id="outputC">
+								<div class="sideblock" id="disappear"></div>
+								<div class="main-output">
+									<div class="output-area" id="smallBox">
+										<div class="output-img">
+											<img src="img/holder-cell.jpg" id="image" />
+										</div>
+										<div class="output-info">
+											<div class="info-name">
+												<span id="heading">Click on a circle!</span>
+											</div>
+											<div class="info-text">
+												<span id="info">The text will appear once you click on a circle above!</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sideblock" id="disappear"></div>
+							</div>
+						</div>
+						<div class="sideblock" id="disappear"></div>
+					</div>
+				</div>
+				<div id="shadow-top"></div>
+				<div class="divider">
+					<div id="bonus-author">
+						<div class="calc-container">
+							<div class="calc-area">
+								<div class="column-input">
+									<div class="calc-name">
+										<span class="calc-title">Photosynthesis <br /> Calculator</span> <br />
+									</div>
+									<div class="input">
+										<div class="input-value">
+											<input type="number" id="water" min="0" step="6" />
+										</div>
+										<span><b>Water</b> (H<sub>2</sub>O)</span>
+									</div>
+									<div class="input">
+										<div class="input-value">
+											<input type="number" id="cDioxide" min="0" step="6" />
+										</div>
+										<span><b>Carbon Dioxide</b> (CO<sub>2</sub>)</span>
+									</div>
+									<div id="disappear"></div>
+								</div>
+								<div class="column-arrow">
+									<div class="calc-name">
+										<span class="calc-inst">For every repetition of photosynthesis, the plant uses 6 molecules of water and 6 molecules of carbon dioxide. <b>Type in a pair of same numbers that are multiples of 6</b> to find out how much the plant creates!</span>
+									</div>
+									<div id="arrow" onclick="Calculate()"><img src="img/arrow.png" /></div>
+									<div id="disappear"></div>
+								</div>
+								<div class="column-output">
+									<div id="disappear"></div>
+									<div class="output">
+										<div class="output-value" id="oxygen"></div>
+										<span><b>Oxygen</b> (O<sub>2</sub>)</span>
+									</div>
+									<div class="output">
+										<div class="output-value" id="glucose"></div>
+										<span><b>Glucose</b> (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>)</span>
+									</div>
+									<div id="disappear"></div>
+								</div>
+							</div>
+							<div class="author-area">
+								<div class="title-container">
+									<span class="author-title">About The Authors</span>
+								</div>
+								<div class="author-icons">
+									<div class="icon"><img src="img/carlos.jpg" /></div>
+									<div class="icon"><img src="img/hanielle.jpg" /></div>
+									<div class="icon"><img src="img/melyza.jpg" /></div>
+								</div>
+								<div class="author-desc">
+									<div class="desc">
+										<span>
+											<b>Carlos Salazar</b> </br> </br>
+											Carlos is a science high school student who's currently battling thinking about how he's going to get through this school year.
+										</span>
+									</div>
+									<div class="desc">
+										<span>
+											<b>Hanielle Chua</b> </br> </br>
+											Hanielle is a Grade 9 student from PSHS. She tries her best to learn Biology and Web development. Hanielle also aspires to be a girlfriend in the near future.
+										</span>
+									</div>
+									<div class="desc">
+										<span>
+											<b>Melyza Vinas</b> </br> </br>
+											Melyza is in her third year of being a Pisay scholar. She enjoys playing tetris and likes drawing semi-realistic portraits.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="shadow-bottom"></div>
+				<div id="greetings-main">
+					<div id="greetings">
+						<div></div>
+						<div id="title">
+							<b>Hello!</b> <br />
+							<span>After spending the first two quarters with you po may gusto lang po kaming sabihinnn hehe thank you po talaga :></span>
+						</div>
+						<div id="inptText">
+							<div>
+								<input type="text" id="msgName" placeholder="Please enter your first name. ">
+							</div>
+							<span><b>Note:</b> Case-sensitive! </span>
+						</div>
+						<div id="inptButton">
+							<div>
+								<input type="button" value="Click Me!" onclick="msg()">
+							</div>
+						</div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Below are the buttons for the page -->
+
+			<div id="logo">
+				<img src="img/logo.png" />
+			</div>
+			<div id="buttons-bar">
+				<a class="mode-cell" href="#functionC" onclick="setTimeout(cell, 0800); setTimeout(ShowCell, 0200); setTimeout(HideTissue, 0200);">
+					CELL
+				</a>
+				<a class="mode-tissue" href="#functionC" onclick="setTimeout(tissue, 0800); setTimeout(HideCell, 0200); setTimeout(ShowTissue, 0200);">
+					TISSUE
+				</a>
+				<a class="mode-bonus" href="#bonus-author">
+					BONUS
+				</a>
+			</div>
+			<div id="button-back" onclick="setTimeout(deactivate,0800)">
+				<img id="source" src="img/backOne.png" width="35" height="35"
+					 onmouseover="this.src='img/backTwo.png'"
+					 onmouseout="this.src='img/backOne.png'" />
+			</div>
+		</div>
+		<script type="text/javascript" src="js/functions.js"></script>
+	</main>
+</body>
+</html>
