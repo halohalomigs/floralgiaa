@@ -32,7 +32,7 @@
 
 			<div class="main-divider">
 				<div class="divider" id="background">
-					<div class="container" id="functionC">
+					<div class="container" id="main-functions">
 						<div class="sideblock">
 							<div id="function-info">
 								<div id="main-box">
@@ -89,7 +89,21 @@
 								<div class="sideblock" id="disappear"></div>
 							</div>
 						</div>
-						<div class="sideblock" id="disappear"></div>
+						<div class="sideblock" id="videobar"> 
+							<div id ="cover"></div>
+							<iframe id = "videos" src="https://www.youtube.com/embed/9UvlqAVCoqY" 
+									frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+									allowfullscreen onclick="sizer()"></iframe> <br />
+							<iframe id = "videos" src="https://www.youtube.com/embed/9pLQwa6SyZc" 
+									frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+									allowfullscreen onclick="sizer()"></iframe> <br />
+							<iframe id = "videos" src="https://www.youtube.com/embed/cIftMUWs4q0" 
+									frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+									allowfullscreen onclick="sizer()"></iframe> <br />
+							<iframe id = "videos" src="https://www.youtube.com/embed/Hja0SLs2kus" 
+									frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+									allowfullscreen onclick="sizer()"></iframe> <br />
+						</div>
 					</div>
 				</div>
 				<div id="shadow-top"></div>
@@ -140,9 +154,9 @@
 									<span class="author-title">About The Authors</span>
 								</div>
 								<div class="author-icons">
-									<div class="icon"><img src="img/carlos.jpg" /></div>
-									<div class="icon"><img src="img/hanielle.jpg" /></div>
-									<div class="icon"><img src="img/melyza.jpg" /></div>
+									<div class="icon"><a href="https://twitter.com/suarezcaloy"><img src="img/carlos.jpg" /></div></a>
+									<div class="icon"><a href="https://twitter.com/HanileleJermaly"><img src="img/hanielle.jpg" /></div></a>
+									<div class="icon"><a href="https://twitter.com/melyzavinas"><img src="img/melyza.jpg" /></div></a>
 								</div>
 								<div class="author-desc">
 									<div class="desc">
@@ -174,17 +188,18 @@
 						<div></div>
 						<div id="title">
 							<b>Hello!</b> <br />
-							<span>After spending the first two quarters with you po may gusto lang po kaming sabihinnn hehe thank you po talaga :></span>
+							<span>Would you be interested in supporting Floralgia in the future? If so, please answer this form!</span>
 						</div>
 						<div id="inptText">
 							<div>
-								<input type="text" id="msgName" placeholder="Please enter your first name. ">
+								<input type="radio" id="form" value="yes" /> Yes!
+								<input type="radio" id="form" value="no" /> No. <br /> <br />
+								<input type="text" id="email" placeholder="Please enter your email address. ">
 							</div>
-							<span><b>Note:</b> Case-sensitive! </span>
 						</div>
 						<div id="inptButton">
 							<div>
-								<input type="button" value="Click Me!" onclick="msg()">
+								<input type="button" value="Submit!" onclick="msg()">
 							</div>
 						</div>
 						<div></div>
@@ -198,20 +213,20 @@
 				<img src="img/logo.png" />
 			</div>
 			<div id="buttons-bar">
-				<a class="mode-cell" href="#functionC" onclick="setTimeout(cell, 0800); setTimeout(ShowCell, 0200); setTimeout(HideTissue, 0200);">
+				<a class="mode-cell" href="#main-functions" onclick="setTimeout(cell, 0800); setTimeout(ShowCell, 0200); setTimeout(HideTissue, 0200);">
 					CELL
 				</a>
-				<a class="mode-tissue" href="#functionC" onclick="setTimeout(tissue, 0800); setTimeout(HideCell, 0200); setTimeout(ShowTissue, 0200);">
+				<a class="mode-tissue" href="#main-functions" onclick="setTimeout(tissue, 0800); setTimeout(HideCell, 0200); setTimeout(ShowTissue, 0200);">
 					TISSUE
 				</a>
 				<a class="mode-bonus" href="#bonus-author">
 					BONUS
 				</a>
 			</div>
-			<div id="button-back" onclick="setTimeout(deactivate,0800)">
+			<div id="button-back" onclick="setTimeout(deactivate,0600)">
 				<img id="source" src="img/backOne.png" width="35" height="35"
-					 onmouseover="this.src='img/backTwo.png'"
-					 onmouseout="this.src='img/backOne.png'" />
+					 onmouseover="this.src = 'img/backTwo.png'; this.width = '45'; this.height ='45'"
+					 onmouseout="this.src='img/backOne.png'; this.width = '35'; this.height ='35'" />
 			</div>
 		</div>
 		<script type="text/javascript" src="js/functions.js"></script>
