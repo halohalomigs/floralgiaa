@@ -690,16 +690,14 @@ iframe:hover {
     border-radius: 5px;
     vertical-align: middle;
     height: 48px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Inconsolata, Courier;
+    background-color: white;
 }
 
 #arrow {
     cursor: pointer;
-}
-
-.output-value {
-    text-align: center;
-    font-size: 20px;
-    background-color: white;
 }
 
 input[type="number"] {
@@ -709,7 +707,7 @@ input[type="number"] {
     border: 0px;
     text-align: center;
     font-size: 20px;
-    font-family: Inconsolata;
+    font-family: Inconsolata, Courier;
 }
 
 .author-area {
