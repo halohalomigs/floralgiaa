@@ -505,7 +505,7 @@ iframe:hover {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 9999;
     display: flex;
     background-color: #333;
     margin: 0;
